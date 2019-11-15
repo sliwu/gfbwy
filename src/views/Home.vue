@@ -1,18 +1,67 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <topbar :menuStruc='menulist'>
+    </topbar>
+    <carousel :imgSrc='imgSrc'></carousel>
+    <maincontens></maincontens>
+    <botbar></botbar>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+  //组件懒加载
+  const topbar = () => import('@/components/topbar/topbar.vue')
+  const carousel = () => import('@/components/carousel/carousel.vue')
+  const maincontens=()=>import('@/components/maincontens/maincontens.vue')
+  const botbar=()=>import('@/components/botbar/botbar.vue')
 
-export default {
-  name: 'home',
-  components: {
-    HelloWorld
+  //图片路径导入
+  import bgImg from "@/assets/homeimg/1.jpg";
+  import bgImg2 from "@/assets/homeimg/2.jpg";
+
+  export default {
+    name: 'home',
+    components: {
+      topbar,
+      carousel,
+      maincontens,
+      botbar
+    },
+    data() {
+      return {
+        menulist: [{
+          title: '首页',
+          url: 'home'
+        }, {
+          title: '导览',
+          url: 'home'
+        }, {
+          title: '展览',
+          url: 'home'
+        }, {
+          title: '教育',
+          url: 'home'
+        }, {
+          title: '探索',
+          url: 'home'
+        }, {
+          title: '学术',
+          url: 'home'
+        }, {
+          title: '文创',
+          url: 'home'
+        }, {
+          title: '关于',
+          url: 'home'
+        }],
+        imgSrc: [{
+            src: bgImg
+          },
+          {
+            src: bgImg2
+          }
+        ]
+      }
+    }
   }
-}
 </script>
