@@ -1,0 +1,8 @@
+html,body{
+    /* 主体大小不能小于1572px */
+    min-width: 1572px;
+}
+* {
+    padding: 0;
+    margin: 0;
+}

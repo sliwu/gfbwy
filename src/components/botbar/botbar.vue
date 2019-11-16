@@ -1,9 +1,9 @@
-<style>
+<style scoped>
     .botbar {
         background-color: black;
         width: 100%;
         height: 100px;
-
+        overflow:hidden;
     }
 
     .botbar p {

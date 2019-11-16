@@ -1,9 +1,9 @@
 <!-- 主体内容宽度一共1572px -->
-<style>
+<style scoped>
     .boxcenter {
         width: 928px;
         height: 940px;
-
+        
     }
 
     .boxleft {

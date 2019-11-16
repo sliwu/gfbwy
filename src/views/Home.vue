@@ -1,6 +1,6 @@
 <template>
   <div>
-    <topbar :menuStruc='menulist'>
+    <topbar :menuStruc='menulist' >
     </topbar>
     <carousel :imgSrc='imgSrc'></carousel>
     <maincontens></maincontens>

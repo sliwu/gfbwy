@@ -1,18 +1,18 @@
-<style>
-    * {
-        padding: 0;
-        margin: 0;
-    }
+<style scoped>
+
 
     .topbar {
         position: absolute;
         width: 100%;
-        min-width: 1024px;
         height: 49px;
-        background-color: rgb(0, 0, 0, 0.5);
         z-index: 10;
+  
     }
-
+    /* 不设置宽度会被挤小 */
+    .menusize{
+        width: 80px;
+        height: 21px;
+    }
     .menufont-size{
         font-size: 16px;
         color: white;
@@ -25,13 +25,13 @@
 </style>
 
 <template>
-    <el-row class="topbar"  type="flex" align='middle' >
-        <el-col :span="4">
+    <el-row class="topbar"  type="flex" align='middle' :style='{"background-color":"rgba(0, 0, 0,"+opacityA+")"}'>
+        <el-col :span="4" style="margin-left: 30px;">
             <a href="javascript:void(0)">
                 <img :src="logoImgSrc" style="height: 46px;" />
             </a>
         </el-col>
-        <el-col :span='1' :push="4" v-for="item in menuStruc" :key="item.title">
+        <el-col :span='1' :push="4" v-for="item in menuStruc" :key="item.title" class="menusize">
                 <a :href="item.url" class="menufont-size">{{item.title}}</a>
         </el-col>
     </el-row>
@@ -43,7 +43,7 @@
         name: 'topbar',
         data() {
             return {
-                logoImgSrc: imglogoSrc,
+                logoImgSrc: imglogoSrc
             }
         },
         components: {
@@ -53,9 +53,14 @@
 
         },
         props: {
+            // 设置菜单列表
             menuStruc: {
                 title: String,
                 url: String
+            },
+            // 设置背景颜色透明度
+            opacityA:{
+                default:0.5
             }
         }
     }
