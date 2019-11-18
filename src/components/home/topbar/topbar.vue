@@ -1,12 +1,9 @@
 <style scoped>
-
-
     .topbar {
         position: absolute;
         width: 100%;
         height: 49px;
         z-index: 10;
-  
     }
     /* 不设置宽度会被挤小 */
     .menusize{
@@ -17,7 +14,6 @@
         font-size: 16px;
         color: white;
         text-decoration:none;
-
     }
     .menufont-size:hover{
         color: rgb(230, 168, 34);
@@ -50,7 +46,7 @@
 
         },
         methods: {
-
+            
         },
         props: {
             // 设置菜单列表
@@ -61,7 +57,8 @@
             // 设置背景颜色透明度
             opacityA:{
                 default:0.5
-            }
+                
+            }    
         }
     }
 </script>

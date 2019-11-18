@@ -10,15 +10,15 @@
 
 <script>
   //组件懒加载
-  const topbar = () => import('@/components/topbar/topbar.vue')
-  const carousel = () => import('@/components/carousel/carousel.vue')
-  const maincontens=()=>import('@/components/maincontens/maincontens.vue')
-  const botbar=()=>import('@/components/botbar/botbar.vue')
+  const topbar = () => import('@/components/home/topbar/topbar.vue')
+  const carousel = () => import('@/components/home/carousel/carousel.vue')
+  const maincontens=()=>import('@/components/home/maincontens/maincontens.vue')
+  const botbar=()=>import('@/components/home/botbar/botbar.vue')
 
   //图片路径导入
   import bgImg from "@/assets/homeimg/1.jpg";
   import bgImg2 from "@/assets/homeimg/2.jpg";
-
+  
   export default {
     name: 'home',
     components: {

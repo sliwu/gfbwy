@@ -2,7 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 
 const Home= ()=>import('@/views/Home.vue')
-
+const szwwk=()=>import('@/views/sszwk.vue')
 Vue.use(VueRouter)
 
 const routes = [
@@ -10,6 +10,11 @@ const routes = [
     path: '/',
     name: 'home',
     component: Home
+  },
+  {
+    path:'/szwwk',
+    name:'szwwk',
+    component:szwwk
   }
 ]
 
