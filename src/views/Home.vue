@@ -31,28 +31,31 @@
       return {
         menulist: [{
           title: '首页',
-          url: 'home'
+          url: '/home'
         }, {
           title: '导览',
-          url: 'home'
+          url: '/home'
         }, {
           title: '展览',
-          url: 'home'
+          url: '/home'
         }, {
           title: '教育',
-          url: 'home'
+          url: '/home'
         }, {
           title: '探索',
-          url: 'home'
+          url: '/home'
         }, {
           title: '学术',
-          url: 'home'
+          url: '/home'
         }, {
           title: '文创',
-          url: 'home'
+          url: '/home'
         }, {
           title: '关于',
-          url: 'home'
+          url: '/home'
+        },{
+          title:'数字文物库',
+          url:'/szwwk'
         }],
         imgSrc: [{
             src: bgImg

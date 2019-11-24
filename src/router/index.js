@@ -15,6 +15,11 @@ const routes = [
     path:'/szwwk',
     name:'szwwk',
     component:szwwk
+  },
+  {
+    path:'/home',
+    name:'h_home',
+    component: Home
   }
 ]
 

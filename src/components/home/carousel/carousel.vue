@@ -1,6 +1,7 @@
 <style scoped>
 
 </style>
+
 <template>
     <div><el-carousel 
         height="900px" 
