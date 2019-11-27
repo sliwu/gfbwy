@@ -37,9 +37,6 @@ module.exports = {
         }
       }
     }
-<<<<<<< HEAD
-  }
-=======
   },
   //设置浏览器favicon图标
   pwa:{
@@ -52,5 +49,4 @@ module.exports = {
     }
   }
 
->>>>>>> 主页图片布局完成
 }

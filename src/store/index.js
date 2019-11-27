@@ -4,16 +4,6 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-<<<<<<< HEAD
-  state: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
-  modules: {
-  }
-=======
     state: {
         screenWidth: document.documentElement.clientWidth,//屏幕宽度
         screenHeight: document.documentElement.clientHeight,//屏幕高度
@@ -64,5 +54,4 @@ export default new Vuex.Store({
     mutations: {},
     actions: {},
     modules: {}
->>>>>>> 主页图片布局完成
 })

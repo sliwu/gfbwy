@@ -3,19 +3,6 @@
 </style>
 
 <template>
-<<<<<<< HEAD
-    <div><el-carousel 
-        height="900px" 
-        indicator-position="none"
-        arrow='never'
-        :interval="4000"
-        ><el-carousel-item v-for="item in imgSrc" :key="item.src">
-                <el-image 
-                style="width: 100%; height: 100%"
-                :src='item.src'
-                fit='cover'
-                ></el-image></el-carousel-item></el-carousel></div>
-=======
     <div>
         <el-carousel
                 :height='m_screenHeight+"px"'
@@ -33,30 +20,20 @@
             </el-carousel-item>
         </el-carousel>
     </div>
->>>>>>> 主页图片布局完成
 </template>
 <script>
     export default {
         name: 'carousel',
         data() {
             return {
-<<<<<<< HEAD
-
-=======
                 m_screenWidth: '',
                 m_screenHeight: ''
->>>>>>> 主页图片布局完成
             }
         },
         props: {
             imgSrc: {
                 src: String
             }
-<<<<<<< HEAD
-        }
-    }
-</script>
-=======
         },
         mounted() {
             //监听窗口变化改变轮播图大小
@@ -78,4 +55,3 @@
 
     }
 </script>
->>>>>>> 主页图片布局完成

@@ -1,27 +1,3 @@
-<<<<<<< HEAD
-<style scoped>
-
-</style>
-
-<template>
-  <div>
-   
-  </div>
-</template>
-
-<script>
-export default {
-  name: "img-card-view",
-  components: {},
-  data() {
-    return {};
-  },
-  methods: {},
-  props: {
-  
-  }
-};
-=======
 <style lang="less">
   .imgview{
     width: 100%;
@@ -50,6 +26,5 @@ export default {
         methods: {},
         props: {}
     };
->>>>>>> 主页图片布局完成
 </script>
 

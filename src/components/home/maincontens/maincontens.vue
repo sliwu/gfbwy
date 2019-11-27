@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-<!-- 主体内容宽度一共1572px -->
-<style scoped>
-    .boxcenter {
-        width: 928px;
-        height: 940px;
-        
-    }
-
-    .boxleft {
-        width: 928px;
-        height: 464px;
-        background-color: blue;
-    }
-=======
 <!-- 主体内容宽度一共1580px -->
 <style lang='less' scoped>
 
@@ -128,65 +113,23 @@
         background-color: #d3ff6a;
     }
 
->>>>>>> 主页图片布局完成
     .boxleftB {
         margin-top: 40px;
         width: 928px;
         height: 434px;
-<<<<<<< HEAD
-        background-color: rgb(221, 139, 45);
-    }
-=======
     }
 
->>>>>>> 主页图片布局完成
     .boxleftBL {
         width: 464px;
         height: 434px
     }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 主页图片布局完成
     .boxright {
         margin-left: 40px;
         width: 612px;
         height: 940px;
 
     }
-<<<<<<< HEAD
-    .boxrightL{
-        width: 204px;
-        height: 292px;
-        background-color: chartreuse;    
-    }
-    .boxrightM{
-        width: 204px;
-        height: 292px;
-        background-color: rgb(39, 228, 187);    
-    }
-    .boxrightR{
-        width: 204px;
-        height: 292px;
-        background-color: rgb(245, 193, 81);    
-    }
-    .boxrightB{
-        margin-top: 40px;
-        width: 612px;
-        height: 608px;
-        background-color: darkgoldenrod;
-    }
-
-
-    .middleC{
-        width: 384px;
-        height: 464px;
-        margin-right: 40px;
-        background-color: darkgreen;
-    }
-    .middleCL{
-=======
 
     .boxrightL {
         width: 204px;
@@ -316,41 +259,23 @@
     }
 
     .middleCL {
->>>>>>> 主页图片布局完成
         width: 386px;
         height: 464px;
         background-color: rgb(243, 71, 71);
     }
-<<<<<<< HEAD
-    .middleCM{
-=======
 
     .middleCM {
->>>>>>> 主页图片布局完成
         width: 386px;
         height: 464px;
         background-color: rgb(250, 218, 76);
     }
-<<<<<<< HEAD
-    .middleCR{
-=======
 
     .middleCR {
->>>>>>> 主页图片布局完成
         width: 386px;
         height: 464px;
         background-color: rgb(55, 114, 241);
     }
 
-<<<<<<< HEAD
-    .middleBL{
-        width: 1112px;
-        height: 478px;
-        background-color: brown;
-        margin-right: 40px;
-    }
-    .middleBR{
-=======
     .middleBL {
         width: 1112px;
         height: 478px;
@@ -359,36 +284,10 @@
     }
 
     .middleBR {
->>>>>>> 主页图片布局完成
         width: 430px;
         height: 478px;
         background-color: rgb(228, 133, 133);
     }
-<<<<<<< HEAD
-    .bottomB1{
-        width: 266px;
-        height: 238px;
-        background-color: dodgerblue;
-    }
-    .bottomB2{
-        width: 266px;
-        height: 238px;
-        background-color: rgb(130, 187, 243);
-    }
-    .bottomB3{
-        width: 266px;
-        height: 238px;
-        background-color: rgb(30, 255, 188);
-    }
-    .bottomB4{
-        width: 266px;
-        height: 238px;
-        background-color: rgb(171, 238, 14);
-    }
-    .bottomB5{
-        width: 266px;
-        height: 238px;
-=======
 
     .bottomC {
         margin-bottom: 40px;
@@ -422,7 +321,6 @@
     .bottomB5 {
         width: 316px;
         height: 280px;
->>>>>>> 主页图片布局完成
         background-color: rgb(182, 17, 174);
     }
 
@@ -432,15 +330,6 @@
     <div>
         <!-- 上半部内容 -->
         <el-row type="flex" justify="center" style="margin-top: 40px;margin-bottom: 40px;">
-<<<<<<< HEAD
-
-            <el-col class="boxcenter" :span="16">
-                <!-- 左上角模块 -->
-                <el-row class="boxleft">
-                    <el-col :span="24">
-                        <div>
-                            图片
-=======
             <el-col class="boxcenter" :span="16">
                 <!-- 左上角模块 -->
                 <el-row>
@@ -484,22 +373,10 @@
                     <!--                    右图-->
                     <el-col :span="12" class="boxlefttopR">
                         <div :style="boxlefttopRsrcStyle">
->>>>>>> 主页图片布局完成
                         </div>
                     </el-col>
                 </el-row>
                 <!-- 左下角 -->
-<<<<<<< HEAD
-                <el-row class="boxleftB">
-                    <el-col :span="12">
-                        <div class="boxleftBL">
-                            图片左
-                        </div>
-                    </el-col>
-                    <el-col :span="12">
-                        <div>
-                            图片右
-=======
                 <el-row class="boxleftB" :style="boxleftBBgimgSrcStyle">
                     <el-col :span="12" class="boxleftBL">
                         <div>
@@ -509,7 +386,6 @@
                     <el-col :span="12" class="boxleftBL">
                         <div>
 
->>>>>>> 主页图片布局完成
                         </div>
                     </el-col>
                 </el-row>
@@ -518,21 +394,6 @@
                 <!-- 右上角內容 -->
                 <el-row>
                     <el-col :span="8" class="boxrightL">
-<<<<<<< HEAD
-                        <div>123</div>
-                    </el-col>
-                    <el-col :span="8" class="boxrightM" >
-                        <div>456</div>
-                    </el-col>
-                    <el-col :span="8" class="boxrightR">
-                        <div>789</div>
-                    </el-col>
-                </el-row>
-                <!-- 右下角 -->
-                <el-row class="boxrightB">
-                    <el-col :span="24">
-                        <div>00000</div>
-=======
                         <div :style="boxrightLIco1">
 
                         </div>
@@ -554,7 +415,6 @@
                         <div :style="boxrightBImg">
 
                         </div>
->>>>>>> 主页图片布局完成
                     </el-col>
                 </el-row>
             </el-col>
@@ -562,47 +422,6 @@
         <!-- 中上内容 -->
         <el-row type="flex" justify="center" style="margin-bottom: 40px;">
             <el-col :span="6" class="middleC">
-<<<<<<< HEAD
-                <div >123</div>
-            </el-col>
-            <el-col :span="6" class="middleCL">
-                <div>456</div>
-            </el-col>
-            <el-col :span="6" class="middleCM">
-                    <div>789</div>
-            </el-col>
-            <el-col :span="6" class="middleCR">
-                    <div>100</div>
-            </el-col>               
-        </el-row>
-        <!-- 中下内容 -->
-        <el-row  type="flex" justify="center" style="margin-bottom: 40px;">
-            <el-col :span="18" class="middleBL">
-                <div>123456</div>
-            </el-col>
-            <el-col :span="6" class="middleBR">
-                <div>789654</div>
-            </el-col>
-        </el-row>
-        <!-- 最下面内容 -->
-        <el-row type="flex" justify="center" style="margin-bottom: 40px;">
-            <el-col :span="4" class="bottomB1" >
-                <div>123</div>
-            </el-col>
-            <el-col :span="4"  class="bottomB2">
-                <div>456</div>
-            </el-col>
-            <el-col :span="4"  class="bottomB3">
-                <div>789</div>
-            </el-col>
-            <el-col :span="4"  class="bottomB4">
-                <div>0123</div>
-            </el-col>
-            <el-col :span="4"  class="bottomB5">
-                <div>456</div>
-            </el-col>
-        </el-row>
-=======
                 <div :style="collectionQuantityImgStyle">
                     <div class="collectionIco1">
                         <a href="/szwwk">
@@ -681,13 +500,10 @@
             </el-col>
         </el-row>
 
->>>>>>> 主页图片布局完成
     </div>
 </template>
 
 <script>
-<<<<<<< HEAD
-=======
     //导入图片
     import collectionQuantitySrc from "@/assets/middlebottom/gf_collection.jpg";
     import collectionIcoSrc from "@/assets/middlebottom/gf_collectionIco.png";
@@ -714,13 +530,10 @@
     import bottomCImg5 from "@/assets/bottomC/5.jpg";
 
 
->>>>>>> 主页图片布局完成
     export default {
         name: 'maincontens',
         data() {
             return {
-<<<<<<< HEAD
-=======
                 //套件小图标
                 collectionIcoSrc: collectionIcoSrc,
                 collectionIcoSrc1: collectionIcoSrc1,
@@ -827,7 +640,6 @@
 
                 //在store中获取修改藏品总数量
                 collectionQuantity: this.$store.state.collectionQuantity,
->>>>>>> 主页图片布局完成
 
             }
         },

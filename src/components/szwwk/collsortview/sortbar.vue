@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<style scoped>
-=======
 <style lang="less" >
   .sortbar{
     width:210px ;
@@ -10,18 +7,12 @@
     left: 0;
     top: 70px;
   }
->>>>>>> 主页图片布局完成
 
 </style>
 
 <template>
-<<<<<<< HEAD
-  <div>
-   
-=======
   <div class="sortbar">
 
->>>>>>> 主页图片布局完成
   </div>
 </template>
 
