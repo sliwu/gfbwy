@@ -16,9 +16,17 @@
   const botbar=()=>import('@/components/home/botbar/botbar.vue')
 
   //图片路径导入
+<<<<<<< HEAD
   import bgImg from "@/assets/homeimg/1.jpg";
   import bgImg2 from "@/assets/homeimg/2.jpg";
   
+=======
+  import bgImg1 from "@/assets/homeimg/1.jpg";
+  import bgImg2 from "@/assets/homeimg/2.jpg";
+  import bgImg3 from "@/assets/homeimg/3.jpg";
+
+
+>>>>>>> 主页图片布局完成
   export default {
     name: 'home',
     components: {
@@ -57,11 +65,29 @@
           title:'数字文物库',
           url:'/szwwk'
         }],
+<<<<<<< HEAD
         imgSrc: [{
             src: bgImg
           },
           {
             src: bgImg2
+=======
+        imgSrc: [
+          {
+            id:0,
+            src:bgImg1,
+            url:'/szwwk'
+          },
+          {
+            id:1,
+            src:bgImg2,
+            url:'/szwwk'
+          },
+          {
+            id:2,
+            src:bgImg3,
+            url:'/szwwk'
+>>>>>>> 主页图片布局完成
           }
         ]
       }

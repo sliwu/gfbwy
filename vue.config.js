@@ -37,5 +37,20 @@ module.exports = {
         }
       }
     }
+<<<<<<< HEAD
   }
+=======
+  },
+  //设置浏览器favicon图标
+  pwa:{
+    iconPath:{
+      favicon32     : 'favicon.ico',
+      favicon16     : 'favicon.ico',
+      appleTouchIcon: 'favicon.ico',
+      maskIcon      : 'favicon.ico',
+      msTileImage   : 'favicon.ico'
+    }
+  }
+
+>>>>>>> 主页图片布局完成
 }

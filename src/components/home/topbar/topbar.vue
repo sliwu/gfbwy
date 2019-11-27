@@ -1,6 +1,10 @@
 <style scoped>
     .topbar {
+<<<<<<< HEAD
         position: absolute;
+=======
+        position:fixed;
+>>>>>>> 主页图片布局完成
         width: 100%;
         height: 49px;
         z-index: 10;
@@ -34,7 +38,11 @@
 </template>
 
 <script>
+<<<<<<< HEAD
     import imglogoSrc from "@/assets/logo/logo.png";
+=======
+    import imglogoSrc from "@/assets/logo/logo.png"
+>>>>>>> 主页图片布局完成
     export default {
         name: 'topbar',
         data() {

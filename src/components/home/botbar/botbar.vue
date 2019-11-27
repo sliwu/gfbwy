@@ -1,9 +1,18 @@
+<<<<<<< HEAD
 <style scoped>
     .botbar {
         background-color: black;
         width: 100%;
         height: 100px;
         overflow:hidden;
+=======
+<style lang="less" scoped>
+    .botbar {
+        background-color: black;
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+>>>>>>> 主页图片布局完成
     }
 
     .botbar p {
@@ -11,9 +20,18 @@
         color: white;
     }
 
+<<<<<<< HEAD
     .textcenter p {
         text-align: center;
         margin: 4px;
+=======
+    .textcenter {
+        line-height: 23px;
+        p {
+            text-align: center;
+            margin: 4px;
+        }
+>>>>>>> 主页图片布局完成
     }
 </style>
 
@@ -42,9 +60,13 @@
     export default {
         name: 'botbar',
         data() {
+<<<<<<< HEAD
             return {
 
             }
+=======
+            return {}
+>>>>>>> 主页图片布局完成
         },
     }
 </script>

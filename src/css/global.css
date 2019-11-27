@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 html,body{
     /* 主体大小不能小于1572px */
     min-width: 1572px;
 }
+=======
+>>>>>>> 主页图片布局完成
 * {
     padding: 0;
     margin: 0;
