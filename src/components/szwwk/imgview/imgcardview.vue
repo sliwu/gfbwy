@@ -1,17 +1,33 @@
 <style lang="less">
   .imgview{
-    width: 100%;
-    height: 100%;
     background-color: #00737b;
     position: absolute;
     top: 70px;
     left: 210px;
-
+    overflow: auto;
   }
 </style>
 
 <template>
-    <div class="imgview">
+    <div class="imgview" :style="{height:height+'px',width:width+'px'}">
+    <div>123123</div>
+    <div>123123</div>
+    <div>123123</div>
+    <div>123123</div>
+    <div>123123</div>
+    <div>123123</div>
+    <div>123123</div>
+    <div>123123</div>
+    <div>123123</div>
+    <div>123123</div>
+    <div>123123</div>
+    <div>123123</div>
+    <div>123123</div>
+    <div>123123</div>
+    <div>123123</div>
+    <div>123123</div>
+    <div>123123</div>
+    <div>123123</div>
 
     </div>
 </template>
@@ -24,7 +40,10 @@
             return {};
         },
         methods: {},
-        props: {}
+        props: {
+            width:Number,
+            height:Number
+        }
     };
 </script>
 

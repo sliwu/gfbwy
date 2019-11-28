@@ -1,4 +1,7 @@
 <style lang="less" scoped>
+    body{
+        width: 100%;
+    }
     .botbar {
         background-color: black;
         width: 100%;
@@ -21,8 +24,8 @@
 </style>
 
 <template>
-    <el-row class="botbar" type="flex" justify="center" align="middle">
-        <el-col :span="6">
+    <el-row  type="flex" justify="center" align="middle">
+        <el-col :span="24" class="botbar">
             <div class="textcenter">
                 <p>
                     Mail/邮箱：gfbwy@gfbwy.com

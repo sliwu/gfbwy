@@ -1,7 +1,6 @@
 <style lang="less" >
   .sortbar{
     width:210px ;
-    height: 100%;
     background-color: #00636a;
     position: absolute;
     left: 0;
@@ -11,7 +10,7 @@
 </style>
 
 <template>
-  <div class="sortbar">
+  <div class="sortbar" :style="{height:height+'px'}">
 
   </div>
 </template>
@@ -31,7 +30,7 @@ export default {
    methods: {
   },
   props: {
-  
+    height:Number
   }
 };
 </script>
