@@ -1,8 +1,11 @@
+<style lang="less">
+
+</style>
 <template>
     <div>
         <topbar :menuStruc='menulist'></topbar>
         <carousel :imgSrc='imgSrc' :height="m_screenHeight"></carousel>
-<!--        <maincontens></maincontens>-->
+        <maincontens></maincontens>
         <botbar></botbar>
     </div>
 </template>
@@ -11,13 +14,14 @@
     //组件懒加载
     const topbar = () => import('@/components/home/topbar/topbar.vue')
     const carousel = () => import('@/components/home/carousel/carousel.vue')
-    // const maincontens = () => import('@/components/home/maincontens/maincontens.vue')
+    const maincontens = () => import('@/components/home/maincontens/maincontens.vue')
     const botbar = () => import('@/components/home/botbar/botbar.vue')
 
     //图片路径导入
     import bgImg1 from "@/assets/homeimg/1.jpg";
     import bgImg2 from "@/assets/homeimg/2.jpg";
     import bgImg3 from "@/assets/homeimg/3.jpg";
+    import bgImg4 from "@/assets/homeimg/4.jpg";
 
 
     export default {
@@ -25,7 +29,7 @@
         components: {
             topbar,
             carousel,
-            // maincontens,
+            maincontens,
             botbar
         },
         data() {
@@ -74,6 +78,11 @@
                     {
                         id: 2,
                         src: bgImg3,
+                        url: '/szwwk'
+                    },
+                    {
+                        id: 3,
+                        src: bgImg4,
                         url: '/szwwk'
                     }
                 ],

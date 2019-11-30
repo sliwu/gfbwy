@@ -1,33 +1,62 @@
-<style lang="less">
-  .imgview{
-    background-color: #00737b;
-    position: absolute;
-    top: 70px;
-    left: 210px;
-    overflow: auto;
-  }
+<style lang="less" scoped>
+    .imgview {
+        display: inline-block;
+        width: 86%;
+        height: 100%;
+        background-color: #00737b;
+        overflow: auto;
+        margin-bottom: -4px;
+    }
 </style>
 
 <template>
-    <div class="imgview" :style="{height:height+'px',width:width+'px'}">
-    <div>123123</div>
-    <div>123123</div>
-    <div>123123</div>
-    <div>123123</div>
-    <div>123123</div>
-    <div>123123</div>
-    <div>123123</div>
-    <div>123123</div>
-    <div>123123</div>
-    <div>123123</div>
-    <div>123123</div>
-    <div>123123</div>
-    <div>123123</div>
-    <div>123123</div>
-    <div>123123</div>
-    <div>123123</div>
-    <div>123123</div>
-    <div>123123</div>
+    <div class="imgview" :style="{height:height+'px'}">
+        <div>123123</div>
+        <div>123123</div>
+        <div>123123</div>
+        <div>123123</div>
+        <div>123123</div>
+        <div>123123</div>
+        <div>123123</div>
+        <div>123123</div>
+        <div>123123</div>
+        <div>123123</div>
+        <div>123123</div>
+        <div>123123</div>
+        <div>123123</div>
+        <div>123123</div>
+        <div>123123</div>
+        <div>123123</div>
+        <div>123123</div>
+        <div>123123</div>
+        <div>123123</div>
+        <div>123123</div>
+        <div>123123</div>
+        <div>123123</div>
+        <div>123123</div>
+        <div>123123</div>
+        <div>123123</div>
+        <div>123123</div>
+        <div>123123</div>
+        <div>123123</div>
+        <div>123123</div>
+        <div>123123</div>
+        <div>123123</div>
+        <div>123123</div>.
+        <div>123123</div>
+        <div>123123</div>
+        <div>123123</div>
+        <div>123123</div>
+        <div>123123</div>
+        <div>123123</div>
+        <div>123123</div>
+        <div>123123</div>
+        <div>123123</div>
+        <div>123123</div>
+        <div>123123</div>
+        <div>123123</div>
+        <div>123123</div>
+        <div>123123</div>
 
     </div>
 </template>
@@ -41,8 +70,7 @@
         },
         methods: {},
         props: {
-            width:Number,
-            height:Number
+            height: Number
         }
     };
 </script>

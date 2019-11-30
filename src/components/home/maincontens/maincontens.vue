@@ -110,7 +110,7 @@
     .boxlefttopR {
         width: 464px;
         height: 464px;
-        background-color: #d3ff6a;
+
     }
 
     .boxleftB {
@@ -140,13 +140,13 @@
     .boxrightM {
         width: 204px;
         height: 292px;
-        background-color: rgb(39, 228, 187);
+
     }
 
     .boxrightR {
         width: 204px;
         height: 292px;
-        background-color: rgb(245, 193, 81);
+
     }
 
     .boxrightB {
@@ -261,19 +261,19 @@
     .middleCL {
         width: 386px;
         height: 464px;
-        background-color: rgb(243, 71, 71);
+
     }
 
     .middleCM {
         width: 386px;
         height: 464px;
-        background-color: rgb(250, 218, 76);
+
     }
 
     .middleCR {
         width: 386px;
         height: 464px;
-        background-color: rgb(55, 114, 241);
+
     }
 
     .middleBL {
@@ -286,48 +286,78 @@
     .middleBR {
         width: 430px;
         height: 478px;
-        background-color: rgb(228, 133, 133);
+
     }
 
     .bottomC {
-        margin-bottom: 40px;
+        margin-top: 30px;
+        margin-bottom: 30px;
         height: 280px;
     }
 
     .bottomB1 {
         width: 316px;
         height: 280px;
-        background-color: dodgerblue;
+
     }
 
     .bottomB2 {
         width: 316px;
         height: 280px;
-        background-color: rgb(130, 187, 243);
+
     }
 
     .bottomB3 {
         width: 316px;
         height: 280px;
-        background-color: rgb(30, 255, 188);
+
     }
 
     .bottomB4 {
         width: 316px;
         height: 280px;
-        background-color: rgb(171, 238, 14);
+
     }
 
     .bottomB5 {
         width: 316px;
         height: 280px;
-        background-color: rgb(182, 17, 174);
+
     }
 
 </style>
 
 <template>
     <div>
+        <!-- 最下面内容 -->
+        <el-row type="flex" justify="center" class="bottomC">
+            <el-col :span="4" class="bottomB1">
+                <div :style="bottomCImg1">
+
+                </div>
+            </el-col>
+            <el-col :span="4" class="bottomB2">
+                <div :style="bottomCImg2">
+
+                </div>
+            </el-col>
+            <el-col :span="4" class="bottomB3">
+                <div :style="bottomCImg3">
+
+                </div>
+            </el-col>
+            <el-col :span="4" class="bottomB4">
+                <div :style="bottomCImg4">
+
+                </div>
+            </el-col>
+            <el-col :span="4" class="bottomB5">
+                <div :style="bottomCImg5">
+
+                </div>
+            </el-col>
+        </el-row>
+
         <!-- 上半部内容 -->
         <el-row type="flex" justify="center" style="margin-top: 40px;margin-bottom: 40px;">
             <el-col class="boxcenter" :span="16">
@@ -419,7 +449,9 @@
                 </el-row>
             </el-col>
         </el-row>
+
         <!-- 中上内容 -->
+
         <el-row type="flex" justify="center" style="margin-bottom: 40px;">
             <el-col :span="6" class="middleC">
                 <div :style="collectionQuantityImgStyle">
@@ -459,6 +491,7 @@
             </el-col>
         </el-row>
         <!-- 中下内容 -->
+
         <el-row type="flex" justify="center" style="margin-bottom: 40px;">
             <el-col :span="18" class="middleBL">
                 <div :style="middleBLImg">
@@ -471,34 +504,7 @@
                 </div>
             </el-col>
         </el-row>
-        <!-- 最下面内容 -->
-        <el-row type="flex" justify="center" class="bottomC">
-            <el-col :span="4" class="bottomB1">
-                <div :style="bottomCImg1">
 
-                </div>
-            </el-col>
-            <el-col :span="4" class="bottomB2">
-                <div :style="bottomCImg2">
-
-                </div>
-            </el-col>
-            <el-col :span="4" class="bottomB3">
-                <div :style="bottomCImg3">
-
-                </div>
-            </el-col>
-            <el-col :span="4" class="bottomB4">
-                <div :style="bottomCImg4">
-
-                </div>
-            </el-col>
-            <el-col :span="4" class="bottomB5">
-                <div :style="bottomCImg5">
-
-                </div>
-            </el-col>
-        </el-row>
 
     </div>
 </template>
@@ -523,11 +529,11 @@
     import middleCLImg3 from "@/assets/middleCL/3.jpg";
     import middleBLImg from "@/assets/middleBL/1.jpg";
     import middleBRImg from "@/assets/middleBR/1.jpg";
-    import bottomCImg1 from "@/assets/bottomC/1.jpg";
-    import bottomCImg2 from "@/assets/bottomC/2.jpg";
-    import bottomCImg3 from "@/assets/bottomC/3.jpg";
-    import bottomCImg4 from "@/assets/bottomC/4.jpg";
-    import bottomCImg5 from "@/assets/bottomC/5.jpg";
+     import bottomCImg1 from "@/assets/bottomC/1.png";
+    // import bottomCImg2 from "@/assets/bottomC/2.jpg";
+    // import bottomCImg3 from "@/assets/bottomC/3.jpg";
+    // import bottomCImg4 from "@/assets/bottomC/4.jpg";
+    // import bottomCImg5 from "@/assets/bottomC/5.jpg";
 
 
     export default {
@@ -611,26 +617,31 @@
                 },
                 bottomCImg1:{
                     'background-image': 'url(' + bottomCImg1 + ')',
+                    "background-color":'#2e7283',
                     width: '316px',
                     height:'280px'
                 },
                 bottomCImg2:{
-                    'background-image': 'url(' + bottomCImg2 + ')',
+                    // 'background-image': 'url(' + bottomCImg2 + ')',
+                    "background-color":'#255c6a',
                     width: '316px',
                     height:'280px'
                 },
                 bottomCImg3:{
-                    'background-image': 'url(' + bottomCImg3 + ')',
+                    // 'background-image': 'url(' + bottomCImg3 + ')',
+                    "background-color":'#1d4650',
                     width: '316px',
                     height:'280px'
                 },
                 bottomCImg4:{
-                    'background-image': 'url(' + bottomCImg4 + ')',
+                    // 'background-image': 'url(' + bottomCImg4 + ')',
+                    "background-color":'#255c6a',
                     width: '316px',
                     height:'280px'
                 },
                 bottomCImg5:{
-                    'background-image': 'url(' + bottomCImg5 + ')',
+                    // 'background-image': 'url(' + bottomCImg5 + ')',
+                    "background-color":'#2e7283',
                     width: '316px',
                     height:'280px'
                 },

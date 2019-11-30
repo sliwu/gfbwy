@@ -1,4 +1,4 @@
-<style lang="less">
+<style scoped lang="less" >
 
     .topbar {
         width: 100%;
@@ -9,14 +9,7 @@
     .serachIco {
         width: 260px;
     }
-    .topPosition{
-        position: fixed;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 70px;
-        z-index: 100;
-    }
+
 </style>
 
 <template>

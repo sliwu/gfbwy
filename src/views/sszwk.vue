@@ -1,13 +1,12 @@
 <style lang="less" >
-html,body{
 
-}
 </style>
 <template>
     <div>
         <topbar></topbar>
-        <sortbar :height="sortHeight"></sortbar>
-        <imgcardview :height="imgHeight" :width="imgWidth"></imgcardview>
+        <sortbar :height="compHeight"></sortbar>
+        <imgcardview :height="compHeight"></imgcardview>
+        <botbar color="#005359"></botbar>
     </div>
 </template>
 
@@ -16,38 +15,30 @@ html,body{
     const topbar = () => import('@/components/szwwk/topview/topbar.vue')
     const sortbar = () => import('@/components/szwwk/collsortview/sortbar.vue')
     const imgcardview = () => import('@/components/szwwk/imgview/imgcardview.vue')
+    const botbar = () => import('@/components/home/botbar/botbar.vue')
 
 
-    //图片路径导入
-    // import bgImg from "@/assets/homeimg/1.jpg";
-    // import bgImg2 from "@/assets/homeimg/2.jpg";
 
     export default {
         name: 'szwwk',
         components: {
             topbar,
             sortbar,
-            imgcardview
+            imgcardview,
+            botbar
         },
         data() {
             return {
-                imgWidth: Number,
-                imgHeight: Number,
-                sortHeight:Number
+                compHeight:Number
             }
         },
         mounted() {
             window.onresize=()=>{
-                this.imgWidth=window.innerWidth-210 //窗口宽度
-                this.imgHeight=window.innerHeight-70 //窗口宽度
-                this.sortHeight=window.innerHeight-70
+               this.compHeight= window.innerHeight-70-60
             }
-
         },
         created() {
-            this.imgWidth=window.innerWidth-210 //窗口宽度
-            this.imgHeight=window.innerHeight-70 //窗口宽度
-            this.sortHeight=window.innerHeight-70
+            this.compHeight=window.innerHeight-70-60
         }
     }
 </script>

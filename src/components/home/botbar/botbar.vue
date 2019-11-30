@@ -1,47 +1,51 @@
 <style lang="less" scoped>
-    body{
-        width: 100%;
-    }
     .botbar {
-        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 100%;
-        height: auto;
+        height: 60px;
         overflow: hidden;
-    }
-
-    .botbar p {
-        font-size: 14px;
-        color: white;
     }
 
     .textcenter {
         line-height: 23px;
-        p {
+
+        span {
+            font-size: 14px;
+            color: white;
             text-align: center;
             margin: 4px;
         }
+
+        div {
+            text-align: center;
+        }
+
+
     }
 </style>
 
 <template>
-    <el-row  type="flex" justify="center" align="middle">
-        <el-col :span="24" class="botbar">
-            <div class="textcenter">
-                <p>
+    <div class="botbar" :style="{'background-color':color}">
+        <div class="textcenter">
+                <span>
                     Mail/邮箱：gfbwy@gfbwy.com
-                </p>
-                <p>
+                </span>
+            <span>
                     Tel/联系电话：0854-3228082
-                </p>
-                <p>
+                </span>
+            <div>
+
+                <span>
                     ©2019 古风博物院版权所有
-                </p>
-                <p>
-                    黔ICP备19011326号
-                </p>
+                </span>
+                    <span>黔ICP备19011326号</span>
+
             </div>
-        </el-col>
-    </el-row>
+        </div>
+    </div>
+
 </template>
 
 <script>
@@ -50,5 +54,11 @@
         data() {
             return {}
         },
+        props: {
+            color: {
+                type: String,
+                default: '#000'
+            }
+        }
     }
 </script>

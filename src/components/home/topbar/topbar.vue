@@ -66,13 +66,13 @@
 
 <template>
     <el-row class="topbar" type="flex" align='middle' :style='{"background-color":"rgba(0, 0, 0,"+opacityA+")"}'>
-        <el-col :xs="1" :sm="2">
+        <el-col  :span="2">
             <a href="javascript:void(0)">
                 <img :src="logoImgSrc"/>
             </a>
         </el-col>
 <!--        导航栏-->
-        <el-col :sm='22' class="navbar">
+        <el-col :span='22' :psuh="4" class="navbar">
             <ul>
                 <li  v-for="item in menuStruc" :key="item.title" >
                     <a :href="item.url">{{item.title}}</a>
