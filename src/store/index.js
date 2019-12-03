@@ -50,8 +50,10 @@ export default new Vuex.Store({
                 date: '11/27'
             },
         ],
+
     },
     mutations: {},
+    getters:{},
     actions: {},
     modules: {}
 })

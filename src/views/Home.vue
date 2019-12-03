@@ -24,6 +24,7 @@
     import bgImg4 from "@/assets/homeimg/4.jpg";
 
 
+
     export default {
         name: 'home',
         components: {

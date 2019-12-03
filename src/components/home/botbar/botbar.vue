@@ -40,7 +40,12 @@
                 <span>
                     ©2019 古风博物院版权所有
                 </span>
-                    <span>黔ICP备19011326号</span>
+                <span>黔ICP备19011326号</span>
+                <div>
+                    <span style="color:white">建议分辨率：1920*1080</span>
+                    <span>建议浏览器：IE10 Chrome</span>
+                </div>
+
 
             </div>
         </div>
