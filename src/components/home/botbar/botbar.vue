@@ -4,11 +4,13 @@
         justify-content: center;
         align-items: center;
         width: 100%;
-        height: 60px;
+        height: 100px;
         overflow: hidden;
+
     }
 
     .textcenter {
+
         line-height: 23px;
 
         span {

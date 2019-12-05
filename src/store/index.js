@@ -50,10 +50,60 @@ export default new Vuex.Store({
                 date: '11/27'
             },
         ],
-
+        //导航栏内容
+        menulist: [{
+            title: '首页',
+            url: '/home'
+        }, {
+            title: '新闻',
+            url: '/news'
+        },{
+            title: '文创',
+            url: '/wc'
+        }, {
+            title: '图书馆',
+            url: '/books'
+        }, {
+            title: '视听馆',
+            url: '/audio'
+        },   {
+            title: '数字文物库',
+            url: '/szwwk'
+        },{
+            title: '关于',
+            url: '/about'
+        }],
+        // 主页数字文物库展示
+        homeSzwwkImgInfo:[
+            {id:Number,src:String,title:String,dynasty:String,description:String},
+            {id:Number,src:String,title:String,dynasty:String,description:String},
+            {id:Number,src:String,title:String,dynasty:String,description:String},]
     },
     mutations: {},
-    getters:{},
+    getters:{
+        getNewsInfo(state){
+            return state.newsInfo
+        },
+        getBulletinInfo(state){
+            return state.bulletinInfo
+        },
+        getCollectionQuantity(state){
+            return state.collectionQuantity
+        },
+        getScreenWidth(state){
+        return state.screenWidth
+        },
+        getScreenHeight(state){
+            return state.screenHeight
+        },
+        getMenuList(state){
+            return state.menulist
+        },
+        getHomeSzwwkImgInfo(state){
+            return state.homeSzwwkImgInfo
+        }
+
+    },
     actions: {},
     modules: {}
 })

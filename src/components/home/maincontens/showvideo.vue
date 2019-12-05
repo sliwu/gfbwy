@@ -1,7 +1,7 @@
 <style scoped lang="less">
 
     .videoFrame {
-
+        border-radius: 10px 10px 10px 10px;
         position: absolute;
         left: 0;
         top: 0;
@@ -11,7 +11,7 @@
         video {
             width: 928px;
             height: 464px;
-
+            border-radius: 10px 10px 10px 10px;
         }
 
         .videoSzie {

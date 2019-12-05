@@ -1,9 +1,12 @@
 <style lang="less">
-
+    html, body {
+        min-width: 1600px;
+        background-color: #e6e6e6;
+    }
 </style>
 <template>
     <div>
-        <topbar :menuStruc='menulist'></topbar>
+        <topbar :menuStruc='this.$store.getters.getMenuList'></topbar>
         <carousel :imgSrc='imgSrc' :height="m_screenHeight"></carousel>
         <maincontens></maincontens>
         <botbar></botbar>
@@ -24,7 +27,6 @@
     import bgImg4 from "@/assets/homeimg/4.jpg";
 
 
-
     export default {
         name: 'home',
         components: {
@@ -35,35 +37,6 @@
         },
         data() {
             return {
-                //导航栏内容
-                menulist: [{
-                    title: '首页',
-                    url: '/home'
-                }, {
-                    title: '导览',
-                    url: '/home'
-                }, {
-                    title: '展览',
-                    url: '/home'
-                }, {
-                    title: '教育',
-                    url: '/home'
-                }, {
-                    title: '探索',
-                    url: '/home'
-                }, {
-                    title: '学术',
-                    url: '/home'
-                }, {
-                    title: '文创',
-                    url: '/home'
-                }, {
-                    title: '关于',
-                    url: '/home'
-                }, {
-                    title: '数字文物库',
-                    url: '/szwwk'
-                }],
                 //图片地址
                 imgSrc: [
                     {
@@ -97,6 +70,20 @@
             window.onresize = () => { // 定义窗口大小变更通知事件
                 this.m_screenWidth = window.innerWidth //窗口宽度
                 this.m_screenHeight = window.innerHeight //窗口高度
+            }
+            window.onscroll = () => {
+                //给shadingMap显示的时候加上动画特效
+                const shadingMap = document.getElementById('shadingMap')
+                // 获取浏览器窗口可视化高度
+                const clientH = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+                // 获取showp元素顶部到浏览器窗口顶部的距离
+                const showTop = shadingMap.getBoundingClientRect().top;
+                // 如果距离小于可视化窗口高度，就给showp元素添加动画效果
+                if (showTop <= clientH) {
+                    //需要优化每次滚动都触发
+                    shadingMap.style.animationPlayState = 'running';
+                    console.log('显示shadingMap')
+                }
 
             }
         },

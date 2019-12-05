@@ -13,7 +13,7 @@
     const topbar = () => import('@/components/home/topbar/topbar.vue')
     const botbar = () => import('@/components/home/botbar/botbar.vue')
     export default {
-        name: "news",
+        name: "audio",
         data(){
             return{
 
@@ -29,4 +29,3 @@
     }
 
 </script>
-
