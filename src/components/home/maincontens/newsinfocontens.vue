@@ -165,7 +165,40 @@
 
     .boxleftBL {
         width: 464px;
-        height: 434px
+        height: 434px;
+        /*屏风*/
+        .img_1{
+
+            position: absolute;
+            left: 550px;
+            top: 150px;
+        }
+        /*扇子*/
+        .img_2{
+
+            position: absolute;
+            left: 230px;
+            top: 40px;
+
+        }
+        /*titile*/
+        .img_3{
+            position: absolute;
+            left: 260px;
+            top: 300px;
+        }
+        /*诗句*/
+        .img_4{
+            position: absolute;
+            left: 700px;
+            top: 50px;
+        }
+        /*竹子*/
+        .img_5{
+            position: absolute;
+            left: -25px;
+            top: 32px;
+        }
     }
 
     .boxright {
@@ -329,9 +362,52 @@
         margin-top: 40px;
         width: 612px;
         height: 608px;
+        .text{
+            position: absolute;
+            left: 50%;
+            top: 80px;
+            transform: translate(-50%);
+            span{
+                font-family: "Microsoft YaHei UI";
+                font-size: 2em;
+                font-weight: bold;
+                color: white;
+            }
+        }
 
     }
+    .fan-enter,.fan-leave-to{
+        opacity: 0;
+        transform: translate(0px,120px);
+    }
+    .fan-enter-active,.fan-leave-active{
+        transition: all 2s ease-in;
+        -moz-transition:all 2s ease-in;/* Firefox 4 */
+        -webkit-transition: all 2s ease-in; /* Safari 和 Chrome */
+        -o-transition:all 2s ease-in; /* Opera */
+    }
 
+    .screen-enter,.screen-leave-to{
+        opacity: 0.0;
+        transform: translate(220px,0px);
+    }
+    .screen-enter-active,.screen-leave-active{
+        transition: all 2s ease-in;
+        -moz-transition:all 2s ease-in;/* Firefox 4 */
+        -webkit-transition: all 2s ease-in; /* Safari 和 Chrome */
+        -o-transition:all 2s ease-in; /* Opera */
+    }
+
+    .fh-enter,.fh-leave-to{
+        opacity: 0.0;
+        transform: translate(120px,0px);
+    }
+    .fh-enter-active,.fh-leave-active{
+        transition: all 2s ease-out;
+        -moz-transition:all 2s ease-out;/* Firefox 4 */
+        -webkit-transition: all 2s ease-out; /* Safari 和 Chrome */
+        -o-transition:all 2s ease-out; /* Opera */
+    }
 </style>
 
 <template>
@@ -401,14 +477,21 @@
             </el-row>
             <!-- 左下角 -->
             <el-row class="boxleftB" :style="boxleftBBgimgSrcStyle">
-                <el-col :span="12" class="boxleftBL">
-                    <div>
-
-                    </div>
-                </el-col>
-                <el-col :span="12" class="boxleftBL">
-                    <div>
-
+                <el-col :span="24" class="boxleftBL">
+                    <div  id="wcAnimation">
+                        <a href="/wc">
+                            <transition name="screen">
+                                <img v-show="$store.getters.getWcAnimationShow" class="img_1" :src="wcImgSrc_1" alt="">
+                            </transition>
+                            <transition name="fan">
+                                <img v-show="$store.getters.getWcAnimationShow" class="img_2" :src="wcImgSrc_2" alt="">
+                            </transition>
+                            <img  class="img_3" :src="wcImgSrc_3" alt="">
+                        </a>
+                        <transition name="fh">
+                            <img  v-show="$store.getters.getWcAnimationShow" class="img_4" :src="wcImgSrc_4" alt="">
+                        </transition>
+                        <img class="img_5" :src="wcImgSrc_5" alt="">
                     </div>
                 </el-col>
             </el-row>
@@ -443,7 +526,7 @@
                 </el-col>
                 <el-col :span="8" class="boxrightR"
                         :style="boxrightLIco4">
-                    <a href="">
+                    <a href="#museum">
                         <div :style="boxrightLIco3" class="boxrightSize boxrightLAnimation"
                              @mouseleave="boxrightLAnimatioOver" @mouseenter="boxrightLAnimatioEnter">
                         </div>
@@ -460,6 +543,9 @@
                     <div :style="boxrightBImg">
 <!--                        设置底纹-->
                         <div :style="boxrightBIco2"></div>
+                        <div class="text">
+                            <span>时间 · 票务</span>
+                        </div>
                     </div>
                 </el-col>
             </el-row>
@@ -492,7 +578,12 @@
 
     //文创背景
     import boxleftBBgimgSrc from "@/assets/background/blue2.jpg";
-
+    //文创背景作品
+    import wcImgSrc_1 from "@/assets/wc/wc_1.png";
+    import wcImgSrc_2 from "@/assets/wc/wc_2.png";
+    import wcImgSrc_3 from "@/assets/wc/wc_3.png";
+    import wcImgSrc_4 from "@/assets/wc/wc_4.png";
+    import wcImgSrc_5 from "@/assets/wc/wc_5.png";
 
     export default {
         name: "middlecontens",
@@ -557,7 +648,11 @@
                     width: '928px',
                     height: '434px'
                 },
-
+                wcImgSrc_1:wcImgSrc_1,
+                wcImgSrc_2:wcImgSrc_2,
+                wcImgSrc_3:wcImgSrc_3,
+                wcImgSrc_4:wcImgSrc_4,
+                wcImgSrc_5:wcImgSrc_5,
                 //古风咨询
                 boxLeftTopLIcoSrc: boxLeftTopLIcoSrc,
                 boxLeftTopLIco1Src: boxLeftTopLIcoSrc,
@@ -579,11 +674,13 @@
         methods: {
             boxrightLAnimatioOver(obj) {
                 //鼠标离开运行动画
+
                 obj.target.style.animationPlayState = 'running';
 
             },
             boxrightLAnimatioEnter(obj) {
                 //鼠标在元素上暂停动画
+
                 obj.target.style.animationPlayState = 'paused';
             },
             palyVideo() {

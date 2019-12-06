@@ -12,6 +12,11 @@
             top: 130px;
 
         }
+        .shadingCloud {
+            position: relative;
+            left: 580px;
+            top: -400px;
+        }
     }
 
     .middleBR {
@@ -28,10 +33,20 @@
     }
     .shadingMap-enter-active,.shadingMap-leave-active{
 
-        transition: all 4s linear;
-        -moz-transition:all 4s linear;/* Firefox 4 */
-        -webkit-transition: all 4s linear; /* Safari 和 Chrome */
-        -o-transition:all 4s linear; /* Opera */
+        transition: all 2s linear;
+        -moz-transition:all 2s linear;/* Firefox 4 */
+        -webkit-transition: all 2s linear; /* Safari 和 Chrome */
+        -o-transition:all 2s linear; /* Opera */
+    }
+    .shadingCloud-enter,.shadingCloud-leave-to{
+        opacity: 0.0;
+        transform: translate(0px,480px);
+    }
+    .shadingCloud-enter-active,.shadingCloud-leave-active{
+        transition: all 2s ease;
+        -moz-transition:all 2s ease;/* Firefox 4 */
+        -webkit-transition: all 2s ease; /* Safari 和 Chrome */
+        -o-transition:all 2s ease; /* Opera */
     }
 </style>
 <template>
@@ -42,11 +57,17 @@
             </div>
         </el-col>
 
-        <el-col :span="18" class="middleBL">
+
+        <a name="museum"></a>
+        <el-col :span="18" class="middleBL" name="museum">
             <div :style="middleBLImg" >
                 <transition name="shadingMap">
                     <img v-show="$store.getters.getShadingMapShow"  id="shadingMap" class="shadingMap" :src="shading" alt="">
                 </transition>
+                <transition name="shadingCloud">
+                    <img v-show="$store.getters.getShadingMapShow"  class="shadingCloud" :src="shading_cloud" alt="">
+                </transition>
+
             </div>
         </el-col>
 
@@ -57,11 +78,13 @@
     import middleBLImg from "@/assets/background/red2.jpg";
     import middleBRImg from "@/assets/middleBR/1.jpg";
     import shading from "@/assets/background/shading_4.png";
+    import shading_cloud from "@/assets/background/shading_5.png";
 
     export default {
         name: "MuseumContens",
         data() {
             return {
+                shading_cloud:shading_cloud,
                 shading: shading,
                 //博物馆活动模块
                 middleBLImg: {

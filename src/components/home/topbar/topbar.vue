@@ -37,6 +37,8 @@
     }
     /*导航栏*/
     .navbar{
+        font-family:"Microsoft YaHei UI";
+        font-weight:500 ;
         a{
             font-size: 1.0em;
             color: white;

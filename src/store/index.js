@@ -57,7 +57,7 @@ export default new Vuex.Store({
         }, {
             title: '新闻',
             url: '/news'
-        },{
+        }, {
             title: '文创',
             url: '/wc'
         }, {
@@ -66,50 +66,60 @@ export default new Vuex.Store({
         }, {
             title: '视听馆',
             url: '/audio'
-        },   {
+        }, {
             title: '数字文物库',
             url: '/szwwk'
-        },{
+        }, {
             title: '关于',
             url: '/about'
         }],
         // 主页数字文物库展示
-        homeSzwwkImgInfo:[
-            {id:Number,src:String,title:String,dynasty:String,description:String},
-            {id:Number,src:String,title:String,dynasty:String,description:String},
-            {id:Number,src:String,title:String,dynasty:String,description:String},],
-        shadingMapShow:false
+        homeSzwwkImgInfo: [
+            {id: Number, src: String, title: String, dynasty: String, description: String},
+            {id: Number, src: String, title: String, dynasty: String, description: String},
+            {id: Number, src: String, title: String, dynasty: String, description: String},],
+        //博物馆活动地图显示状态
+        shadingMapShow: false,
+        //文创图片显示状态
+        wcAnimationShow: false
     },
     mutations: {
-        setShadingMapShow(state,isTrue){
-            state.shadingMapShow=isTrue
-            console.log(isTrue)
+        setShadingMapShow(state, isTrue) {
+            state.shadingMapShow = isTrue
+
+        },
+        setWcAnimationShow(state, isTrue) {
+            state.wcAnimationShow = isTrue
+
         }
     },
-    getters:{
-        getNewsInfo(state){
+    getters: {
+        getNewsInfo(state) {
             return state.newsInfo
         },
-        getBulletinInfo(state){
+        getBulletinInfo(state) {
             return state.bulletinInfo
         },
-        getCollectionQuantity(state){
+        getCollectionQuantity(state) {
             return state.collectionQuantity
         },
-        getScreenWidth(state){
-        return state.screenWidth
+        getScreenWidth(state) {
+            return state.screenWidth
         },
-        getScreenHeight(state){
+        getScreenHeight(state) {
             return state.screenHeight
         },
-        getMenuList(state){
+        getMenuList(state) {
             return state.menulist
         },
-        getHomeSzwwkImgInfo(state){
+        getHomeSzwwkImgInfo(state) {
             return state.homeSzwwkImgInfo
         },
-        getShadingMapShow(state){
+        getShadingMapShow(state) {
             return state.shadingMapShow
+        },
+        getWcAnimationShow(state) {
+            return state.wcAnimationShow
         }
 
     },

@@ -78,15 +78,32 @@
                 const clientH = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
                 // 获取showp元素顶部到浏览器窗口顶部的距离
                 const showTop = shadingMap.getBoundingClientRect().top;
+
                 // 如果距离小于可视化窗口高度，就给showp元素添加动画效果
                 if (showTop <= clientH) {
                     this.$store.commit('setShadingMapShow',true)
+                    console.log('setShadingMapShow='+ this.$store.getters.getShadingMapShow)
                 }
                 else
                 {
                     this.$store.commit('setShadingMapShow',false)
+                    console.log('setShadingMapShow='+ this.$store.getters.getShadingMapShow)
                 }
 
+                //文创图片加上动画
+                const wcAnimation = document.getElementById('wcAnimation')
+                // 获取wcAnimation元素顶部到浏览器窗口顶部的距离
+                var wcAnimationTop = wcAnimation.getBoundingClientRect().top;
+                // 如果距离小于可视化窗口高度，就给wcAnimation元素添加动画效果
+                if (wcAnimationTop<=clientH){
+                    this.$store.commit('setWcAnimationShow',true)
+                    // console.log('setWcAnimationShow='+ this.$store.getters.getWcAnimationShow)
+                }
+                else
+                {
+                    this.$store.commit('setWcAnimationShow',false)
+                    // console.log('setWcAnimationShow='+ this.$store.getters.getWcAnimationShow)
+                }
             }
         },
         created() {
