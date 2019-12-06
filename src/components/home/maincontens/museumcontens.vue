@@ -1,4 +1,4 @@
-<style scoped lang="less">
+<style  lang="less" scoped>
     .middleBL {
         width: 1112px;
         height: 478px;
@@ -8,7 +8,7 @@
 
         .shadingMap {
             position: relative;
-            left: 450px;
+            left: 380px;
             top: 130px;
 
         }
@@ -20,62 +20,19 @@
         height: 478px;
         box-shadow: 8px 8px 4px 1px #ccc;
     }
-/*shadingMap动画特效*/
-    @keyframes mapMove
-    {
-        from {
-            top:60px;
-            opacity: 0;
-        }
-        to {
-            top:130px;
-            opacity: 1;
-        }
-    }
-    @-moz-keyframes mapMove /* Firefox */
-    {
-        from {
-            top:60px;
-            opacity: 0;
-        }
-        to {
-            top:130px;
-            opacity: 1;
-        }
-    }
-    @-webkit-keyframes mapMove /* Safari 和 Chrome */
-    {
-        from {
-            top:60px;
-            opacity: 0;
-        }
-        to {
-            top:130px;
-            opacity: 1;
-        }
-    }
-    @-o-keyframes mapMove /* Opera */
-    {
-        from {
-            top:60px;
-            opacity: 0;
-        }
-        to {
-            top:130px;
-            opacity: 1;
-        }
-    }
-    .shadingMapAnimation {
-        /*设置动画绑定*/
-        animation: mapMove 5s;
-        -moz-animation: mapMove 5s; /* Firefox */
-        -webkit-animation: mapMove 5s; /* Safari 和 Chrome */
-        -o-animation: mapMove 5s; /* Opera */
-        animation-play-state:paused;
 
+    .shadingMap-enter,.shadingMap-leave-to{
+        opacity: 0.0;
+        transform: translate(0px,-180px);
 
     }
+    .shadingMap-enter-active,.shadingMap-leave-active{
 
+        transition: all 4s linear;
+        -moz-transition:all 4s linear;/* Firefox 4 */
+        -webkit-transition: all 4s linear; /* Safari 和 Chrome */
+        -o-transition:all 4s linear; /* Opera */
+    }
 </style>
 <template>
     <el-row type="flex" justify="center" style="margin-bottom: 80px;">
@@ -86,9 +43,10 @@
         </el-col>
 
         <el-col :span="18" class="middleBL">
-            <div :style="middleBLImg">
-                <img id="shadingMap" class="shadingMap shadingMapAnimation" :src="shading" alt="">
-
+            <div :style="middleBLImg" >
+                <transition name="shadingMap">
+                    <img v-show="$store.getters.getShadingMapShow"  id="shadingMap" class="shadingMap" :src="shading" alt="">
+                </transition>
             </div>
         </el-col>
 
@@ -119,6 +77,7 @@
                     height: '478px',
                     'border-radius': '10px 10px 10px 10px'
                 },
+
             }
         },
     }

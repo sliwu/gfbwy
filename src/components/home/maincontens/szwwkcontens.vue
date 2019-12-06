@@ -139,7 +139,7 @@
             <div  class="middleCM" :style="middleCLImg3"></div>
         </el-col>
 
-        <el-col :span="6" class="middleC">
+        <el-col :span="6" class="middleC" :style="collectionQuantityImgShadingStyle">
             <div :style="collectionQuantityImgStyle">
                 <div class="collectionIco1">
                     <a href="/szwwk">
@@ -180,12 +180,14 @@
         data() {
             return {
                 //古风藏品模块
+                collectionQuantityImgShadingStyle:{
+                    'background': `url(${collectionQuantitySrc})`,
+                },
                 collectionQuantityImgStyle: {
                     'background': `
                     url(${shading}) 100% 100% no-repeat,
                     url(${shading}) 50% 100% no-repeat,
-                    url(${shading}) 0% 100% no-repeat,
-                    url(${collectionQuantitySrc}`,
+                    url(${shading}) 0% 100% no-repeat`,
                     'background-size':'106px 128px,133px 160px,106px 128px',
                     'border-radius':'10px 10px 10px 10px',
                     width: '386px',

@@ -77,9 +77,15 @@ export default new Vuex.Store({
         homeSzwwkImgInfo:[
             {id:Number,src:String,title:String,dynasty:String,description:String},
             {id:Number,src:String,title:String,dynasty:String,description:String},
-            {id:Number,src:String,title:String,dynasty:String,description:String},]
+            {id:Number,src:String,title:String,dynasty:String,description:String},],
+        shadingMapShow:false
     },
-    mutations: {},
+    mutations: {
+        setShadingMapShow(state,isTrue){
+            state.shadingMapShow=isTrue
+            console.log(isTrue)
+        }
+    },
     getters:{
         getNewsInfo(state){
             return state.newsInfo
@@ -101,6 +107,9 @@ export default new Vuex.Store({
         },
         getHomeSzwwkImgInfo(state){
             return state.homeSzwwkImgInfo
+        },
+        getShadingMapShow(state){
+            return state.shadingMapShow
         }
 
     },

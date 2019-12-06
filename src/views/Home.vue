@@ -1,6 +1,6 @@
 <style lang="less">
     html, body {
-        min-width: 1600px;
+        min-width: 1650px;
         background-color: #e6e6e6;
     }
 </style>
@@ -80,9 +80,11 @@
                 const showTop = shadingMap.getBoundingClientRect().top;
                 // 如果距离小于可视化窗口高度，就给showp元素添加动画效果
                 if (showTop <= clientH) {
-                    //需要优化每次滚动都触发
-                    shadingMap.style.animationPlayState = 'running';
-                    console.log('显示shadingMap')
+                    this.$store.commit('setShadingMapShow',true)
+                }
+                else
+                {
+                    this.$store.commit('setShadingMapShow',false)
                 }
 
             }
