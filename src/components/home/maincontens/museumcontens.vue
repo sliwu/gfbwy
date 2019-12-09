@@ -48,6 +48,37 @@
         -webkit-transition: all 2s ease; /* Safari 和 Chrome */
         -o-transition:all 2s ease; /* Opera */
     }
+
+    .museTitle {
+        width: 40%;
+        position: relative;
+        top: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        a {
+
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 1.8em;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        a:hover {
+            color: rgb(230, 168, 34);
+        }
+
+        .icoRight {
+            transform: rotate(180deg);
+            -ms-transform: rotate(180deg); /* IE 9 */
+            -moz-transform: rotate(180deg); /* Firefox */
+            -webkit-transform: rotate(180deg); /* Safari 和 Chrome */
+            -o-transform: rotate(180deg); /* Opera */
+        }
+    }
 </style>
 <template>
     <el-row type="flex" justify="center" style="margin-bottom: 80px;">
@@ -60,14 +91,24 @@
 
         <a name="museum"></a>
         <el-col :span="18" class="middleBL" name="museum">
+            <!--                标题内容-->
+
             <div :style="middleBLImg" >
+                <div class="museTitle">
+                    <img class="icoLeft" :src="shadingBack" alt="">
+                    <a href="#" title="点击进入更多活动">
+                        古风
+                        <img :src="shadingBackEmico" alt="">
+                        活动
+                    </a>
+                    <img class="icoRight" :src="shadingBack" alt="">
+                </div>
                 <transition name="shadingMap">
                     <img v-show="$store.getters.getShadingMapShow"  id="shadingMap" class="shadingMap" :src="shading" alt="">
                 </transition>
                 <transition name="shadingCloud">
                     <img v-show="$store.getters.getShadingMapShow"  class="shadingCloud" :src="shading_cloud" alt="">
                 </transition>
-
             </div>
         </el-col>
 
@@ -80,10 +121,17 @@
     import shading from "@/assets/background/shading_4.png";
     import shading_cloud from "@/assets/background/shading_5.png";
 
+    import shadingBack from "@/assets/boxlefttop/ico.png";
+    import shadingBackEmico from "@/assets/boxlefttop/emico.png";
+
     export default {
         name: "MuseumContens",
         data() {
             return {
+                //标题小挂件
+                shadingBack:shadingBack,
+                shadingBackEmico:shadingBackEmico,
+
                 shading_cloud:shading_cloud,
                 shading: shading,
                 //博物馆活动模块

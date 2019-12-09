@@ -116,7 +116,7 @@
         /*古风咨询*/
 
         .aTitle {
-            width: 464px;
+            width: 100%;
             position: relative;
             top: 40px;
             display: flex;
@@ -167,34 +167,43 @@
         width: 464px;
         height: 434px;
         /*屏风*/
-        .img_1{
+
+        .img_1 {
 
             position: absolute;
             left: 550px;
             top: 150px;
         }
+
         /*扇子*/
-        .img_2{
+
+        .img_2 {
 
             position: absolute;
             left: 230px;
             top: 40px;
 
         }
+
         /*titile*/
-        .img_3{
+
+        .img_3 {
             position: absolute;
             left: 260px;
             top: 300px;
         }
+
         /*诗句*/
-        .img_4{
+
+        .img_4 {
             position: absolute;
             left: 700px;
             top: 50px;
         }
+
         /*竹子*/
-        .img_5{
+
+        .img_5 {
             position: absolute;
             left: -25px;
             top: 32px;
@@ -362,51 +371,100 @@
         margin-top: 40px;
         width: 612px;
         height: 608px;
-        .text{
+
+        font-family: "Microsoft YaHei UI";
+        font-size: 2em;
+        font-weight: bold;
+        color: white;
+
+        overflow: hidden;
+
+        .titleText {
+            display: inline-block;
             position: absolute;
             left: 50%;
-            top: 80px;
+            top: 60px;
             transform: translate(-50%);
-            span{
-                font-family: "Microsoft YaHei UI";
-                font-size: 2em;
-                font-weight: bold;
-                color: white;
+        }
+
+        .headText {
+            font-size: 0.6em;
+            position: absolute;
+            top: 130px;
+            left: 50px;
+
+            ul {
+                list-style: none;
+            }
+
+            li {
+                display: inline;
+                margin-right: 30px;
+            }
+
+            .enterTime {
+
+                li {
+                    display: inline;
+                    padding-left: 15px;
+                    padding-right: 15px;
+                }
             }
         }
 
+        .descText {
+            position: absolute;
+            top: 250px;
+            left: 50px;
+            font-size: 0.7em;
+            width: 85%;
+
+            ul {
+                font-size: 0.7em;
+                list-style: none;
+            }
+
+            li {
+                margin-top: 4px;
+
+            }
+        }
     }
-    .fan-enter,.fan-leave-to{
+
+    .fan-enter, .fan-leave-to {
         opacity: 0;
-        transform: translate(0px,120px);
-    }
-    .fan-enter-active,.fan-leave-active{
-        transition: all 2s ease-in;
-        -moz-transition:all 2s ease-in;/* Firefox 4 */
-        -webkit-transition: all 2s ease-in; /* Safari 和 Chrome */
-        -o-transition:all 2s ease-in; /* Opera */
+        transform: translate(0px, 120px);
     }
 
-    .screen-enter,.screen-leave-to{
-        opacity: 0.0;
-        transform: translate(220px,0px);
-    }
-    .screen-enter-active,.screen-leave-active{
+    .fan-enter-active, .fan-leave-active {
         transition: all 2s ease-in;
-        -moz-transition:all 2s ease-in;/* Firefox 4 */
+        -moz-transition: all 2s ease-in; /* Firefox 4 */
         -webkit-transition: all 2s ease-in; /* Safari 和 Chrome */
-        -o-transition:all 2s ease-in; /* Opera */
+        -o-transition: all 2s ease-in; /* Opera */
     }
 
-    .fh-enter,.fh-leave-to{
+    .screen-enter, .screen-leave-to {
         opacity: 0.0;
-        transform: translate(120px,0px);
+        transform: translate(220px, 0px);
     }
-    .fh-enter-active,.fh-leave-active{
+
+    .screen-enter-active, .screen-leave-active {
+        transition: all 2s ease-in;
+        -moz-transition: all 2s ease-in; /* Firefox 4 */
+        -webkit-transition: all 2s ease-in; /* Safari 和 Chrome */
+        -o-transition: all 2s ease-in; /* Opera */
+    }
+
+    .fh-enter, .fh-leave-to {
+        opacity: 0.0;
+        transform: translate(120px, 0px);
+    }
+
+    .fh-enter-active, .fh-leave-active {
         transition: all 2s ease-out;
-        -moz-transition:all 2s ease-out;/* Firefox 4 */
+        -moz-transition: all 2s ease-out; /* Firefox 4 */
         -webkit-transition: all 2s ease-out; /* Safari 和 Chrome */
-        -o-transition:all 2s ease-out; /* Opera */
+        -o-transition: all 2s ease-out; /* Opera */
     }
 </style>
 
@@ -418,7 +476,7 @@
             <el-row style="box-shadow: 8px 8px 4px 1px #ccc;border-radius: 10px 10px 10px 10px;">
                 <!--                    左新闻图-->
                 <el-col :span="12" class="boxlefttopL" :style="boxLeftTopLTitleIco2">
-<!--                    背景底纹-->
+                    <!--                    背景底纹-->
                     <div :style="boxLeftTopLTitleIco3">
                         <!-- 古风咨询-->
                         <div class="aTitle">
@@ -478,7 +536,7 @@
             <!-- 左下角 -->
             <el-row class="boxleftB" :style="boxleftBBgimgSrcStyle">
                 <el-col :span="24" class="boxleftBL">
-                    <div  id="wcAnimation">
+                    <div id="wcAnimation">
                         <a href="/wc">
                             <transition name="screen">
                                 <img v-show="$store.getters.getWcAnimationShow" class="img_1" :src="wcImgSrc_1" alt="">
@@ -486,10 +544,10 @@
                             <transition name="fan">
                                 <img v-show="$store.getters.getWcAnimationShow" class="img_2" :src="wcImgSrc_2" alt="">
                             </transition>
-                            <img  class="img_3" :src="wcImgSrc_3" alt="">
+                            <img class="img_3" :src="wcImgSrc_3" alt="">
                         </a>
                         <transition name="fh">
-                            <img  v-show="$store.getters.getWcAnimationShow" class="img_4" :src="wcImgSrc_4" alt="">
+                            <img v-show="$store.getters.getWcAnimationShow" class="img_4" :src="wcImgSrc_4" alt="">
                         </transition>
                         <img class="img_5" :src="wcImgSrc_5" alt="">
                     </div>
@@ -515,7 +573,7 @@
                 </el-col>
                 <el-col :span="8" class="boxrightM"
                         :style="boxrightLIco5">
-                    <a href="">
+                    <a href="/about">
                         <div :style="boxrightLIco2" class="boxrightSize boxrightLAnimation"
                              @mouseleave="boxrightLAnimatioOver" @mouseenter="boxrightLAnimatioEnter">
                         </div>
@@ -541,10 +599,47 @@
             <el-row>
                 <el-col :span="24" class="boxrightB" style="box-shadow: 8px 8px 4px 1px #ccc;">
                     <div :style="boxrightBImg">
-<!--                        设置底纹-->
+                        <!--                        设置底纹-->
                         <div :style="boxrightBIco2"></div>
-                        <div class="text">
+                        <div class="titleText">
                             <span>时间 · 票务</span>
+                        </div>
+                        <div class="headText">
+                            <ul>
+                                <li>开馆时间</li>
+                                <li>开始售票</li>
+                                <li>停止售票</li>
+                                <li>停止进入</li>
+                                <li>闭馆时间</li>
+                            </ul>
+                            <br/>
+                            <ul class="enterTime">
+                                <li>全年</li>
+                                <li>9:00</li>
+                                <li>16:00</li>
+                                <li>17:00</li>
+                                <li>18:00</li>
+                            </ul>
+
+                        </div>
+                        <div class="descText">
+                            <div style="text-align: center;font-size: 1.2em;border-top: #ccc solid 1px;padding-top: 20px">票务政策</div>
+                            <br/>
+                            <ul>
+                                <span>1.门票价格：</span>
+                                <li>（1）如意苑大门票150元/人；</li>
+                                <li>（2）乐殿门票150元/ 人；</li>
+                                <li>（3）通票（含如意苑、乐殿）：260元/人。</li>
+                            </ul>
+                            <br>
+                            <ul>
+                                <span>2.优惠政策：</span>
+                                <li>（1）身高1米2以下儿童免票；身高1米4以下儿童半票；</li>
+                                <li>（2）70岁以上（含70岁）老人免票；</li>
+                                <li>（3）在校学生、持有社会保障金领取证人员和残疾人群体门票半价优惠；</li>
+                                <li>（4）“三八”妇女节，妇女享受门票半价优惠；</li>
+                                <li>（5）“八一”建军节，现役军人凭有效证件，免费参观。</li>
+                            </ul>
                         </div>
                     </div>
                 </el-col>
@@ -621,22 +716,22 @@
                 boxLeftTopLTitleIco3: {
                     'background': `url(${boxLeftTopLTitleIco3}) 100% 100% no-repeat`,
 
-                     width: '464px',
-                     height: '464px',
+                    width: '464px',
+                    height: '464px',
                 },
                 //票务系统
                 boxrightBImg: {
-                    'background':`url(${boxrightBIco1})`,
-                    'border-radius':'10px 10px 10px 10px',
+                    'background': `url(${boxrightBIco1})`,
+                    'border-radius': '10px 10px 10px 10px',
                     width: '612px',
                     height: '608px',
 
                 },
                 //票务系统底纹
-                boxrightBIco2:{
-                    'background':`url(${boxrightBIco2}) 100% 100% no-repeat`,
+                boxrightBIco2: {
+                    'background': `url(${boxrightBIco2}) 100% 100% no-repeat`,
                     opacity: '0.6',
-                    "background-size":"419px 588px",
+                    "background-size": "419px 588px",
                     width: '612px',
                     height: '608px'
                 },
@@ -644,15 +739,15 @@
                 //文创图片
                 boxleftBBgimgSrcStyle: {
                     'background-image': `url(${boxleftBBgimgSrc}) `,
-                    'border-radius':'10px 10px 10px 10px',
+                    'border-radius': '10px 10px 10px 10px',
                     width: '928px',
                     height: '434px'
                 },
-                wcImgSrc_1:wcImgSrc_1,
-                wcImgSrc_2:wcImgSrc_2,
-                wcImgSrc_3:wcImgSrc_3,
-                wcImgSrc_4:wcImgSrc_4,
-                wcImgSrc_5:wcImgSrc_5,
+                wcImgSrc_1: wcImgSrc_1,
+                wcImgSrc_2: wcImgSrc_2,
+                wcImgSrc_3: wcImgSrc_3,
+                wcImgSrc_4: wcImgSrc_4,
+                wcImgSrc_5: wcImgSrc_5,
                 //古风咨询
                 boxLeftTopLIcoSrc: boxLeftTopLIcoSrc,
                 boxLeftTopLIco1Src: boxLeftTopLIcoSrc,

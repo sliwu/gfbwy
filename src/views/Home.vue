@@ -1,6 +1,7 @@
 <style lang="less">
     html, body {
         min-width: 1650px;
+        background: url("../assets/background/shadingGlobal.jpg");
         background-color: #e6e6e6;
     }
 </style>
@@ -71,6 +72,7 @@
                 this.m_screenWidth = window.innerWidth //窗口宽度
                 this.m_screenHeight = window.innerHeight //窗口高度
             }
+            //滚动条事件
             window.onscroll = () => {
                 //给shadingMap显示的时候加上动画特效
                 const shadingMap = document.getElementById('shadingMap')
@@ -82,12 +84,12 @@
                 // 如果距离小于可视化窗口高度，就给showp元素添加动画效果
                 if (showTop <= clientH) {
                     this.$store.commit('setShadingMapShow',true)
-                    console.log('setShadingMapShow='+ this.$store.getters.getShadingMapShow)
+                    // console.log('setShadingMapShow='+ this.$store.getters.getShadingMapShow)
                 }
                 else
                 {
                     this.$store.commit('setShadingMapShow',false)
-                    console.log('setShadingMapShow='+ this.$store.getters.getShadingMapShow)
+                    // console.log('setShadingMapShow='+ this.$store.getters.getShadingMapShow)
                 }
 
                 //文创图片加上动画
@@ -105,6 +107,7 @@
                     // console.log('setWcAnimationShow='+ this.$store.getters.getWcAnimationShow)
                 }
             }
+            
         },
         created() {
             //刚刚打开页面时重置图片大小
