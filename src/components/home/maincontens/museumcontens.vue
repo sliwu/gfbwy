@@ -96,7 +96,7 @@
             <div :style="middleBLImg" >
                 <div class="museTitle">
                     <img class="icoLeft" :src="shadingBack" alt="">
-                    <a href="#" title="点击进入更多活动">
+                    <a href="/festival" title="点击进入更多活动">
                         古风
                         <img :src="shadingBackEmico" alt="">
                         活动

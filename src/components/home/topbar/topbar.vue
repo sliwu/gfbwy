@@ -1,28 +1,13 @@
 <style scoped lang="less">
-    /*小于812px*/
-    @media screen and  (max-width: 812px) {
-        .topbar {
-            a {
-                margin-left: 0px;
-            }
-        }
-        .navbar{
-            li{
-                margin-left: 15px;
-            }
-        }
-    }
-    /*大于812px*/
-    @media screen and  (min-width: 812px) {
-        .topbar {
-            a {
-                margin-left: 30px;
-            }
-        }
-        .navbar{
-            li{
-                margin-left: 10px;
-            }
+
+    .topbarNoFixed{
+ 
+        width: 100%;
+        height: 49px;
+        z-index: 10;
+        text-align: center;
+        img {
+            height: 46px;
         }
     }
     .topbar {
@@ -30,11 +15,12 @@
         width: 100%;
         height: 49px;
         z-index: 10;
-
+        text-align: center;
         img {
             height: 46px;
         }
     }
+
     /*导航栏*/
     .navbar{
         font-family:"Microsoft YaHei UI";
@@ -50,15 +36,7 @@
         li{
             display: inline;
             list-style: none;
-            width: 80px;
-            height: 21px;
-
-        }
-
-        ul{
-            position: relative;
-            left: 50%;
-            transform: translate(-25%);
+            margin: 0 15px 0 15px
         }
     }
 
@@ -67,7 +45,7 @@
 </style>
 
 <template>
-    <el-row class="topbar" type="flex" align='middle' :style='{"background-color":"rgba(0, 0, 0,"+opacityA+")"}'>
+    <el-row :class="hasFixed ? 'topbarNoFixed' : 'topbar'" type="flex" align='middle' :style='{"background-color":"rgba(0, 0, 0,"+opacityA+")"}'>
         <el-col  :span="2">
             <a href="javascript:void(0)">
                 <img :src="logoImgSrc"/>
@@ -106,6 +84,9 @@
             opacityA: {
                 default: 0.5
 
+            },
+            hasFixed:{
+                default:true
             }
         }
     }

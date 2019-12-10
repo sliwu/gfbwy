@@ -3,3 +3,7 @@
     margin: 0;
 
 }
+html,body{
+    background: url("../assets/background/shadingGlobal.jpg");
+    background-color: #e6e6e6;
+}

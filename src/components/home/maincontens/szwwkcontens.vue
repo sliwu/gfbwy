@@ -103,6 +103,27 @@
         text-indent:2em;
         color: white;
     }
+    .wwk{
+
+        text-align: center;
+        position: relative;
+        top: 130px;
+        a{
+            color: white;
+            text-decoration: none;
+        }
+        a:hover{
+            color: rgb(230, 168, 34);
+
+        }
+        span{
+            font-size: 1.5em;
+            border-radius: 10px;
+            border:2px solid #976f49;
+            padding: 2px 10px 2px 10px;
+        }
+
+    }
 </style>
 
 <template>
@@ -177,6 +198,9 @@
                 </div>
                 <div class="descColl">
                     <span>古风博物院旗下的乐殿博物馆和如意苑博物馆，分别展出汉唐时期音乐舞蹈类的珍贵藏品，清宫如意等福寿吉祥文化的藏品以及唐宋到清代的佛教艺术珍品。两馆馆藏达600余件。</span>
+                </div>
+                <div class="wwk">
+                    <a href=""><span>数字文物库</span></a>
                 </div>
             </div>
         </el-col>

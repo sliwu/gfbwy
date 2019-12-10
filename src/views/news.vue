@@ -1,5 +1,7 @@
-<style scoped>
-
+<style lang="less">
+    html, body {
+        min-width: 850px;
+    }
 </style>
 
 <template>

@@ -584,7 +584,7 @@
                 </el-col>
                 <el-col :span="8" class="boxrightR"
                         :style="boxrightLIco4">
-                    <a href="#museum">
+                    <a href="/festival">
                         <div :style="boxrightLIco3" class="boxrightSize boxrightLAnimation"
                              @mouseleave="boxrightLAnimatioOver" @mouseenter="boxrightLAnimatioEnter">
                         </div>

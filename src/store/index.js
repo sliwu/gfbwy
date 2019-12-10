@@ -65,10 +65,13 @@ export default new Vuex.Store({
             url: '/books'
         }, {
             title: '视听馆',
-            url: '/audio'
+            url: '/listenAudio'
         }, {
             title: '数字文物库',
             url: '/szwwk'
+        }, {
+            title: '博物院活动',
+            url: '/festival'
         }, {
             title: '关于',
             url: '/about'

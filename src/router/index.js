@@ -17,7 +17,9 @@ const about = () => import('@/views/about.vue')
 //图书馆
 const books = () => import('@/views/books.vue')
 //试听馆
-const audio = () => import('@/views/audio.vue')
+const listenAudio = () => import('@/views/listenAudio.vue')
+
+const festival = () => import('@/views/festival.vue')
 
 Vue.use(VueRouter)
 
@@ -60,9 +62,15 @@ const routes = [
     },
     {
         //试听馆
-        path: '/audio',
-        name: 'audio',
-        component: audio
+        path: '/listenAudio',
+        name: 'listenAudio',
+        component: listenAudio
+    },
+    {
+        //活动
+        path:'/festival',
+        name:'festival',
+        component:festival
     },
      {
          //关于

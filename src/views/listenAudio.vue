@@ -1,5 +1,7 @@
-<style scoped>
-
+<style   lang="less">
+    html, body {
+        min-width: 850px;
+    }
 </style>
 
 <template>
@@ -13,7 +15,7 @@
     const topbar = () => import('@/components/home/topbar/topbar.vue')
     const botbar = () => import('@/components/home/botbar/botbar.vue')
     export default {
-        name: "audio",
+        name: "listenAudio",
         data(){
             return{
 

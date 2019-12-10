@@ -1,10 +1,13 @@
-<style scoped>
-
+<style  >
+    html, body {
+        min-width:850px;
+    }
 </style>
 
 <template>
     <div>
         <topbar :menuStruc='this.$store.getters.getMenuList'></topbar>
+        
         <botbar></botbar>
     </div>
 </template>

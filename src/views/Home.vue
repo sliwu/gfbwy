@@ -1,13 +1,11 @@
 <style lang="less">
     html, body {
         min-width: 1650px;
-        background: url("../assets/background/shadingGlobal.jpg");
-        background-color: #e6e6e6;
     }
 </style>
 <template>
     <div>
-        <topbar :menuStruc='this.$store.getters.getMenuList'></topbar>
+        <topbar :menuStruc='this.$store.getters.getMenuList' :hasFixed='false'></topbar>
         <carousel :imgSrc='imgSrc' :height="m_screenHeight"></carousel>
         <maincontens></maincontens>
         <botbar></botbar>
