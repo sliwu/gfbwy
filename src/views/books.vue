@@ -6,7 +6,7 @@
 
 <template>
     <div>
-        <topbar :menuStruc='this.$store.getters.getMenuList'></topbar>
+        <topbar :menuStruc='this.$store.getters.getMenuList' :hasFixed="true"></topbar>
         <botbar></botbar>
     </div>
 </template>

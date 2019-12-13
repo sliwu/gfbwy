@@ -8,6 +8,11 @@ import 'element-ui/lib/theme-chalk/index.css';
 import '@/css/global.css'
 Vue.use(ElementUI);
 
+// axios插件
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+Vue.use(VueAxios, axios)
+
 Vue.config.productionTip = false
 
 new Vue({

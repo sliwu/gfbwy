@@ -5,7 +5,7 @@
         position: absolute;
         left: 0;
         top: 0;
-
+        
         background: rgba(0, 0, 0, 0.7);
 
         video {

@@ -2,7 +2,9 @@
 
 </style>
 <template>
-    <div></div>
+    <div>
+
+    </div>
 </template>
 
 <script>
@@ -10,11 +12,14 @@
         name: "festival",
         data() {
             return {
-
+                
             }
         },
         methods: {
+            LoginUser(){
 
+
+            }
         }
     }
 </script>

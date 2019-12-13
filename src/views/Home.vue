@@ -5,7 +5,7 @@
 </style>
 <template>
     <div>
-        <topbar :menuStruc='this.$store.getters.getMenuList' :hasFixed='false'></topbar>
+        <topbar :menuStruc='this.$store.getters.getMenuList' :hasFixed='false' :opacityA="0.5"></topbar>
         <carousel :imgSrc='imgSrc' :height="m_screenHeight"></carousel>
         <maincontens></maincontens>
         <botbar></botbar>

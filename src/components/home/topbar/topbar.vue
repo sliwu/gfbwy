@@ -82,7 +82,7 @@
             },
             // 设置背景颜色透明度
             opacityA: {
-                default: 0.5
+                default: 1
 
             },
             hasFixed:{
