@@ -77,13 +77,13 @@ export default {
   },
   mounted() {
     //   判断当前是否有滚动条设置botbar是否固定在最低端
-      const hasScrollbar = document.body.scrollHeight > window.innerHeight || document.body.scrollHeight >document.documentElement.clientHeight      
-    if (hasScrollbar) {
-        this.isActive=false
-    }
-    else{
-        this.isActive=true
-    }
+    //   const hasScrollbar = document.body.scrollHeight > window.innerHeight || document.body.scrollHeight >document.documentElement.clientHeight      
+    // if (hasScrollbar) {
+    //     this.isActive=false
+    // }
+    // else{
+    //     this.isActive=true
+    // }
   },
 };
 </script>

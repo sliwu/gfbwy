@@ -6,6 +6,7 @@
     }
 
     .boxlefttopL {
+
         width: 464px;
         height: 464px;
         border-radius: 10px 0 0 10px;
@@ -69,7 +70,7 @@
 
             ul {
                 list-style: none;
-
+                
             }
 
             li {
@@ -85,7 +86,9 @@
             }
 
             a {
-                font-size: 1.0em;
+                font-family: "Microsoft YaHei UI";
+         
+                font-size: 1.1em;
                 text-decoration: none;
                 color: white;
 
@@ -481,7 +484,7 @@
                         <!-- 古风咨询-->
                         <div class="aTitle">
                             <img class="icoLeft" :src="boxLeftTopLTitleSrc" alt="">
-                            <a href="#" title="点击进入更多新闻">
+                            <a href="/news" title="点击进入更多新闻">
                                 古风
                                 <img :src="boxLeftTopLIcoSrc" alt="">
                                 咨询
@@ -505,12 +508,11 @@
                                     <li v-for="item in newsInfo"
                                         :key="item.id">
                                         <a :href="item.src" :title="item.title">
-                                            <em class="datePosition">{{item.date}}</em>
+                                            <span class="datePosition">{{item.date}}</span>
                                             <img :src="boxLeftTopLIcoSrc" alt="">
                                             <span>{{item.title}}</span>
                                             <br>
                                         </a>
-
                                     </li>
                                 </ul>
                             </div>

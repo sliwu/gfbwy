@@ -18,8 +18,8 @@ const about = () => import('@/views/about.vue')
 const books = () => import('@/views/books.vue')
 //试听馆
 const listenAudio = () => import('@/views/listenAudio.vue')
-
-const festival = () => import('@/views/festival.vue')
+// 活动
+// const festival = () => import('@/views/festival.vue')
 
 Vue.use(VueRouter)
 
@@ -70,7 +70,7 @@ const routes = [
         //活动
         path:'/festival',
         name:'festival',
-        component:festival
+        component:news
     },
      {
          //关于
